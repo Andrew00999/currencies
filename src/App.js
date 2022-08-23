@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import './App.scss';
+import Currency from './components/currency';
+import Header from './components/header';
 
 function App() {
+  const [dataCurrencyUSD, setDataCurrencyUSD] = useState('');
+  const [dataCurrencyEUR, setDataCurrencyEUR] = useState('');
+
+  const dataCurrencyUSDFunc = (value) => {
+    setDataCurrencyUSD(value)
+  }
+
+  const dataCurrencyEURFunc = (value) => {
+    setDataCurrencyEUR(value)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="centerModal">
+        <Header
+          dataCurrencyUSD={dataCurrencyUSDFunc}
+          dataCurrencyEUR={dataCurrencyEURFunc}
+        />
+        <Currency currencies={[
+          { name: 'UAH', rate: 1 },
+          { name: 'USD', rate: dataCurrencyUSD },
+          { name: 'EUR', rate: dataCurrencyEUR },
+        ]} />
+      </div>
     </div>
   );
 }
