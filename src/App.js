@@ -12,7 +12,7 @@ function App() {
   }
 
   const dataCurrencyEURFunc = (value) => {
-    setDataCurrencyEUR(value)
+    setDataCurrencyEUR(value) 
   }
 
   return (
