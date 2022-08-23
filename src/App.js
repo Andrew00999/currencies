@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="centerModal">
+      <div className="centerModal"> 
         <Header
           dataCurrencyUSD={dataCurrencyUSDFunc}
           dataCurrencyEUR={dataCurrencyEURFunc}
