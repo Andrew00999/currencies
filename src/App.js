@@ -23,9 +23,9 @@ function App() {
           dataCurrencyEUR={dataCurrencyEURFunc}
         />
         <Currency currencies={[
-          { name: 'UAH', rate: 1 },
-          { name: 'USD', rate: dataCurrencyUSD },
-          { name: 'EUR', rate: dataCurrencyEUR },
+          { name: 'USD', rate: 1 },
+          { name: 'UAH', rate: dataCurrencyUSD },
+          { name: 'EUR', rate: 1 },
         ]} />
       </div>
     </div>
